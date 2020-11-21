@@ -24,7 +24,9 @@
                 height: 100vh;
                 margin: 0;
             }
-
+            .table-responsive {
+                width:100%;
+            }
             
         </style>
     </head>
@@ -40,10 +42,18 @@
                         <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ url('/') }}">Lazy Loading </a>
                         </li>
-                        <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
+                        <li class="nav-item {{ request()->is('/eager-loading') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ url('/eager-loading') }}">Eager Loading </a>
                         </li>
-                        <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
+                        
+                        <li class="nav-item {{ request()->is('/author') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/author') }}">Author CRUD </a>
+                        </li>
+
+                        <li class="nav-item {{ request()->is('/dependency') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/dependency') }}">Dependency Injection </a>
+                        </li>
+                        <li class="nav-item {{ request()->is('/telescope') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ url('/telescope/queries') }}" target="_blank">Telescope (Monitor App) </a>
                         </li>
                     </ul>

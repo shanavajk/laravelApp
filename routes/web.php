@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', 'BooksController@lazyLoadBooks');
 Route::get('/eager-load', 'BooksController@eagerLoadBooks');
+Route::get('/dependency', 'BooksController@getBooksWithDependencyinject');
 
+
+Route::post('/author/create', 'AuthorController@create');
+Route::put('/author/update', 'AuthorController@update');
+Route::delete('/author/delete', 'AuthorController@delete');
+Route::get('/author/', 'AuthorController@index');
+
+/*App.bind("App\ReadConfig\Config", function(){
+    return \App\ReadConfig\Config(config(services.User.key));
+});
+
+$config = App::make("App\ReadConfig\Config");
+var_dump($config);*/
