@@ -1,4 +1,4 @@
-##What is Lazy vs Eager Loading in Laravel?
+##  What is Lazy vs Eager Loading in Laravel?
 	in case of lazy loading the releated entities are not loaded automatically with it's parent entity untill they are requested (N+1 Problem)
 	For ex: 
 		let's say I've a 2 model Author & Books, Author can have many Books & Books belongs to the Author
