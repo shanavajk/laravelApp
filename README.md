@@ -34,7 +34,7 @@
 			foreach ($books as $book) {
 				echo $book->author->name; // this is eager loaded
 			}
-##Explain the active record concept in Laravel with a sample snippet?
+## Explain the active record concept in Laravel with a sample snippet?
 	## Active Record Implementation is an architectural pattern that stores in-memory object data in relational databases.
 	
 	$book = new Book;
@@ -44,7 +44,7 @@
 	$book->save();
 
 
-##What are Closures in Laravel?
+## What are Closures in Laravel?
 	Closure are anonymous functions,  Closures are often used as callback methods and can be used as a parameter in a function.
 	function handle(Closure $closure) { $closure(); }
 
